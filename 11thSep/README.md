@@ -18,3 +18,10 @@ Lib/ → contains the Python packages installed inside your virtual environment.
 Scripts/ → contains executables such as python, pip, and the activation scripts.
 pyvenv.cfg → configuration file telling Python that this folder is a virtual environment and which base Python installation it uses.
 .gitignore → tells Git which files/folders it should not upload to GitHub.
+**Acticate the V.env** 
+ i used **first_venv\Scripts\activate** but due to authorization error i first used Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser and Get-ExecutionPolicy -Scope CurrentUser
+ we can create files within this venv and run after activating venv
+ To deactivate we use **deactivate** 
+ **PIP**
+ A package contains all the files you need for a module. A module is usually a single .py file. Modules are Python code libraries you can include in your project.
+We use pip to install a pacckage also to unistall the packages also can use to check all installed packages in our systems using **pip list**
