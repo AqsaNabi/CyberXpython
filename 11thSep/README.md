@@ -26,9 +26,7 @@ pyvenv.cfg → configuration file telling Python that this folder is a virtual e
  A package contains all the files you need for a module. A module is usually a single .py file. Modules are Python code libraries you can include in your project.
 We use pip to install a pacckage also to unistall the packages also can use to check all installed packages in our systems using **pip list**
 **PYTHON DATA TYPES**
-Data types in Python define the type of value stored in a variable and determine the operations that can be performed on that data. Since Python treats everything as an object, each value is associated with a specific data type.
-
-Helps the interpreter understand how to store and process different kinds of data efficiently.
+Data types in Python define the type of value stored in a variable and determine the operations that can be performed on that data. Since Python treats everything as an object, each value is associated with a specific data type. Helps the interpreter understand how to store and process different kinds of data efficiently.
 Enables correct operations by ensuring only valid actions are performed on compatible data types. 
 **Numeric**
 Numeric data types are used to store numeric values. It can be an integer, floating number or even a complex number. Python supports three main numeric types:  
