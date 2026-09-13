@@ -44,3 +44,39 @@ print(new_list)
 #list corephension
 new_list2=[i for i in x if 1==True]
 print(new_list2)
+#function example to print each elementt within the list
+def List_elements(l):
+    print("The list have following elements: ")
+    for i in l:
+        print(i)
+    return    
+#Using Default Arguments
+List_elements(new_list)
+def sum(y,x=10):
+    print("The ssum is: ", x+y)
+sum(23)
+#passes function as a paarameter to another function
+def fun(func, arg):
+    return func(arg)
+  
+def square(x):
+    return x ** 2
+  
+res = fun(square, 5)
+print(res)    
+#Using *args*
+def mul(*argg):
+    l=[]
+    for arg in argg:
+        l.append(arg)
+    m=1
+    for i in l:
+            m=m*i
+    return m
+print(mul(2,4,5))        
+#using *kwargs
+def fun(**kwargs):
+    for k, val in kwargs.items():
+        print(f"{k}: {val}")
+
+fun(name="aqsa", E_roll=2, branch="CSE")

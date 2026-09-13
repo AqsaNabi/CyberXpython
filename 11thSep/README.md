@@ -63,4 +63,20 @@ syntax newlist = [expression for item in iterable if condition == True]
 Mutable and Immutable describe whether an object can be changed after it has been created. A mutable object can be modified without creating a completely new object—for example, a list can have items added, removed, or changed, and a dictionary can have its values updated. An immutable object cannot be modified once it is created; if you appear to change it, Python actually creates or uses a new object and makes the variable point to that new object. Integers, floats, strings, and tuples are immutable. We have both because they serve different purposes: mutable objects are useful when we need data to change during a program, while immutable objects provide stability and prevent their contents from being accidentally changed. For example, a list of students may need new students added, so a list is mutable, whereas a student's name or age can be treated as an immutable value. '
 
 **Python Functions**
-A function is a block of code which only runs when it is called. A function can return data as a result. A function helps avoiding code repetition.
+A function is a block of code which only runs when it is called. A function can return data as a result. A function helps avoiding code repetition. **def** keyword is used to define user-defined functions. Functions help organize code into reusable blocks, making programs easier to read, maintain, and reuse. They can accept input values through parameters, perform specific tasks and optionally return results.
+*syntax* **def function_name(parameters)  
+  # Code to execute
+  return value  # Optional**
+  In my example i have created a function that prints list elements by taking list as a parameter
+  **Using Default Arguments**`
+  Default arguments allow a function parameter to have a predefined value. If no argument is provided during the function call, the default value is used automatically.
+  **Passing Function as an Argument**
+Functions are first-class objects, which means you can pass functions as arguments to other functions, allowing you to call it inside that function.
+**Using *args**
+*args allows a function to accept a variable number of positional arguments, which are collected into a tuple, making the function flexible to handle multiple inputs.
+i created a fun mul which will multiple all the numbers passed in an argument
+**Using **kwargs**
+**kwargs lets a function accept any number of keyword arguments. These arguments are collected into a dictionary, with keys as argument names and values as their corresponding values.
+
+**Using def Inside a Class**
+Inside a class, functions are called methods. We define them using def just like regular functions, but they usually take self as the first parameter to access the object’s attributes and other methods.
