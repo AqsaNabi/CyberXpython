@@ -36,7 +36,7 @@ Numeric data types are used to store numeric values. It can be an integer, float
 To check types i used type() function.
 Sequence Data Types
 A sequence is an ordered collection of items, which can be of similar or different data types. Elements in a sequence can be accessed using indexing.
-***Sequence Data Types***
+---**Sequence Data Types**---
 A sequence is an ordered collection of items, which can be of similar or different data types. Elements in a sequence can be accessed using indexing.
 **String**
 Strings are used to store text data. A string is represented using the str class and can be created using single, double or triple quotes. We can also use index to access characte within the string                                      
@@ -61,3 +61,6 @@ A nested loop is a loop inside another loop. The inner loop executes completely 
 List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
 syntax newlist = [expression for item in iterable if condition == True]  
 Mutable and Immutable describe whether an object can be changed after it has been created. A mutable object can be modified without creating a completely new object—for example, a list can have items added, removed, or changed, and a dictionary can have its values updated. An immutable object cannot be modified once it is created; if you appear to change it, Python actually creates or uses a new object and makes the variable point to that new object. Integers, floats, strings, and tuples are immutable. We have both because they serve different purposes: mutable objects are useful when we need data to change during a program, while immutable objects provide stability and prevent their contents from being accidentally changed. For example, a list of students may need new students added, so a list is mutable, whereas a student's name or age can be treated as an immutable value. '
+
+**Python Functions**
+A function is a block of code which only runs when it is called. A function can return data as a result. A function helps avoiding code repetition.
