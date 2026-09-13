@@ -64,9 +64,9 @@ Mutable and Immutable describe whether an object can be changed after it has bee
 
 **Python Functions**
 A function is a block of code which only runs when it is called. A function can return data as a result. A function helps avoiding code repetition. **def** keyword is used to define user-defined functions. Functions help organize code into reusable blocks, making programs easier to read, maintain, and reuse. They can accept input values through parameters, perform specific tasks and optionally return results.
-*syntax* **def function_name(parameters)  
-  # Code to execute
-  return value  # Optional**
+**syntax** **def function_name(parameters)
+   Code to execute
+  return value **
   In my example i have created a function that prints list elements by taking list as a parameter
   **Using Default Arguments**`
   Default arguments allow a function parameter to have a predefined value. If no argument is provided during the function call, the default value is used automatically.
