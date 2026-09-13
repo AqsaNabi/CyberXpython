@@ -80,3 +80,15 @@ def fun(**kwargs):
         print(f"{k}: {val}")
 
 fun(name="aqsa", E_roll=2, branch="CSE")
+class Person:
+    def __init__(self, name, age):
+        self.name = name  
+        self.age = age    
+    
+    def val(self):
+        print(f"Name - {self.name} and Age - {self.age}.")
+
+p1 = Person("NAAM", 23)
+p1.val()
+        
+      
