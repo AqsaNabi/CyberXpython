@@ -65,3 +65,81 @@ CRITICAL: A very serious error, indicating that the program itself may be unable
 The logging module allows you to control which messages are recorded by setting the logging level. Only messages that are equal to or more severe than the set level will be logged. The default level is WARNING, meaning only WARNING, ERROR, and CRITICAL messages are logged unless you change the logging configuration.
 
 In the code example above, we set the logging level to DEBUG, which means all log messages (DEBUG, INFO, WARNING, ERROR, and CRITICAL) will be recorded in the app.log file.
+<h3> Trace back</h3>
+In Python, A traceback is a report containing the function calls made in your code at a specific point i.e when you get an error it is recommended that you should trace it backward(traceback). Whenever the code gets an exception, the traceback will give the information about what went wrong in the code.The Python traceback contains great information that can help you find what is going wrong in the code. These tracebacks can look a little wearisome, but once you break it down to see what it’s trying to show you, they can be very helpful. How to read traceback
+Python traceback contains lots of helpful information about what exception is raised. Going through a few tracebacks line by line will give you a better understanding of the information they contain and help you get the most out of them, in this section we will see how to read a particular exception.
+NameError: NameError occurs when you try to reference some variable which hasn’t been defined in the code. Example:
+
+number = 1 
+​
+--since no numb variable is
+--defined it will give NameError.
+print(numb)
+Output:
+Traceback (most recent call last):
+  File "gfg.py", line 5, in 
+    print(numb)  
+NameError: name 'numb' is not defined
+IndexError: An IndexError is raised when a sequence is referenced which is out of range. Example:
+
+
+
+
+mylist = [1, 2, 3]
+​
+--Accessing the index out
+--of range will raise IndexError
+print(mylist[10])
+Output:
+Traceback (most recent call last):
+  File "gfg.py", line 5, in 
+    print(mylist[10])
+IndexError: list index out of range
+KeyError: Similar to the IndexError, the KeyError is raised when you attempt to access a key that isn’t in the mapping, usually in the case of Python dict. Think of this as the IndexError but for dictionaries. Example:
+
+
+
+
+DICT ={ "a" :25, "b" :65 }
+​
+--A is not mapped in dict
+--will raise KeyError
+print(DICT["A"])
+Output:
+Traceback (most recent call last):
+  File "gfg.py", line 5, in 
+    print(DICT["A"])
+KeyError: 'A'
+TypeError: TypeError is raised when an operation or function is applied to an object of inappropriate type. This exception returns a string giving details about the type mismatch. Example:
+
+
+
+
+c = 'b'+3
+print(c)
+Output:
+Traceback (most recent call last):
+  File "gfg.py", line 1, in 
+    c = 'b'+3
+TypeError: must be str, not int
+ValueError: A ValueError is raised when a built-in operation or function receives an argument that has the right type but an invalid value. Example:
+
+
+
+
+print(int('xyz'))
+Traceback (most recent call last):
+  File "gfg.py", line 1, in 
+    print(int('xyz'))
+ValueError: invalid literal for int() with base 10: 'xyz'
+ImportError: The ImportError is raised when something goes wrong with an import statement. You’ll get this exception, or its subclass ModuleNotFoundError, if the module you are trying to import can’t be found or if you try to import something from a module that doesn’t exist in the module. Example:
+
+
+
+
+import module_does_not_exist
+Traceback (most recent call last):
+  File "gfg.py", line 1, in 
+    import module_does_not_exist
+ModuleNotFoundError: No module named 'module_does_not_exist'
+<h5>print() is not considered logging because its main purpose is to display something on the screen, while logging is designed to record events happening inside an application.</h5>
