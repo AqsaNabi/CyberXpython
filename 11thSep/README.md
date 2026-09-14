@@ -78,5 +78,7 @@ i created a fun mul which will multiple all the numbers passed in an argument
 **Using **kwargs**
 **kwargs lets a function accept any number of keyword arguments. These arguments are collected into a dictionary, with keys as argument names and values as their corresponding values.
 
+
+
 **Using def Inside a Class**
 Inside a class, functions are called methods. We define them using def just like regular functions, but they usually take self as the first parameter to access the object’s attributes and other methods.
