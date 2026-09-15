@@ -1,0 +1,17 @@
+import asyncio
+     
+async def task1(): #coroutine function
+    print("Starting task 1...")
+    await asyncio.sleep(2)
+    print("Task 1 completed")
+
+async def task2():
+    print("Starting task 2...")
+    await asyncio.sleep(2)
+    print("Task 2 completed")
+
+async def main():
+    await asyncio.gather(task1(), task2())
+
+if __name__ == "__main__":
+    asyncio.run(main())
