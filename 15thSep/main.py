@@ -1,22 +1,23 @@
-#7
-l=[]
-n=999999999
-c=0
-def prime(num):
-    for i in range(2,num-1):
-        if(num%i==0):
-            return
-        else:
-            l.append(num/i)
-def l_length():
-    m=0
-    for c in l:   
-        m=m+1
-    return m
-c=l_length()        
-for i in range(0,n):
-    if c<10001:
-      prime(i)
-    else:
-      print(l[i])
+import threading
+import time
+def print_numbers():
+   for i in range(1,10):
      
+     print(i**2+7**9)
+     time.sleep(1)
+def print_letters():
+   for i in 'how to kill a man in 10 days':
+      print(i)  
+      time.sleep(0.7)
+
+ #creating two threads objects, one for each function
+th1=threading.Thread(target=print_numbers) 
+th2=threading.Thread(target=print_letters)  
+#starting the two threads 
+th1.start()
+th2.start()
+
+#ensures that the main thread waits for the new thread to finish before continuing.
+th1.join()
+th2.join()
+print("Both threads have finished")
