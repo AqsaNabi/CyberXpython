@@ -24,4 +24,18 @@ In my example i have created two functions one for calculating square and other 
 <h2>Synchronous Programming </h2> 
 In synchronous programming, tasks are executed one after another. Each task must complete before the next one begins. This linear approach is straightforward but can be inefficient, especially when dealing with I/O-bound operations like file reading, network requests, or database queries.
 <h2> Asynchronous Programming</h2>
-In this programming multiple programms are aloowed to run concurrently improving efficiency, especially for I?O bound tasks. Python's asyncio library provides the necessary tools for asynchronous programming. **asyncio** is Python's library for asynchronous programming. **async def task1():** creates an asynchronous function, also called a coroutine function. Inbetween my task1 function i have used await which allows other asynchronous tasks to run while waiting for its respective time. I have also used asyncio.gather function which run these tasks together and wait until both are finished
+In this programming multiple programms are aloowed to run concurrently improving efficiency, especially for I?O bound tasks. Python's asyncio library provides the necessary tools for asynchronous programming. **asyncio** is Python's library for asynchronous programming. **async def task1():** creates an asynchronous function, also called a coroutine function. Inbetween my task1 function i have used await which allows other asynchronous tasks to run while waiting for its respective time. I have also used asyncio.gather function which run these tasks together and wait until both are finished. asyncio.run() creates an event loop, runs the coroutine, and closes the event loop when it's finished.
+<h2>Multiprograming</h2>
+As the name suggests, Multiprogramming means more than one program can be active at the same time. Before the operating system concept, only one program was to be loaded at a time and run. These systems were not efficient as the CPU was not used efficiently.
+
+Example: In a single-tasking system, the CPU is not used if the current program waits for some input/output to finish. The idea of multiprogramming is to assign CPUs to other processes while the current process might not be finished. This has the below advantages:
+
+The user gets the feeling that he/she can run multiple applications on a single CPU even if the CPU is running one process at a time.
+CPU is utilized better.
+Features of Multiprogramming
+Need Single CPU for implementation.
+Context switch between process.
+Switching happens when current process undergoes waiting state.
+CPU idle time is reduced.
+High resource utilization.
+High Performance.
