@@ -6,7 +6,7 @@ def sq(num):
   
 def cube(num):
     for n in num:
-        print('cube ' +str(n*n*n))
+        print('cube  ' +str(n*n*n))
 
 
 if __name__== "__main__":
