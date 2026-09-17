@@ -10,3 +10,4 @@ first i created a virtual named fastvenv and i  then installed uvicorn library u
 in my example i have created a json file consisting the details of each patient assigned a unique id, defined a data_load() function to return data and after the function is called to view all the patient. For searching using unique Patient id i have used path parameter to do.
 
 we can also use path function whih in have i the example i used path function to make this parameter required and show example how our patient id should look like
+i have also used HTTPException to raise exception in case the data is not found 
