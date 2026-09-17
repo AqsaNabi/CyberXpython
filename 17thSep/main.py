@@ -82,6 +82,6 @@ inst_data(p1)
 print(p1)
 print(p1.address.pin)
 temp =p1.model_dump(include=['name'])    
-
+temp2 =p1.model_dump(exclude=['name'])  
 print(temp)
 print(type(temp))
