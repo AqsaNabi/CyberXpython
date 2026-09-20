@@ -1,0 +1,13 @@
+[
+    {
+        "name": "a",
+        "father": "a",
+        "motherName": "a",
+        "gender": "Female",
+        "dob": "2026-09-15",
+        "email": "1@gmail.com",
+        "level": "High School",
+        "department": "Electrical Engineering",
+        "phone": "12234567890"
+    }
+]
