@@ -4,6 +4,19 @@ import json
 app = FastAPI()
 
 
+def load_data():
+    with open('students.json', 'r') as f:
+        data =json.load(f)
+
+    return data
+
+
+@app.get('/view')
+def view():
+    data=load_data()
+    return data
+
+
 @app.post("/submit")
 async def submit(
     name: str = Form(...),
