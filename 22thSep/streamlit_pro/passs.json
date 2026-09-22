@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "name": "Aisha Khan",
+      "password": "Aisha123"
+    },
+    {
+      "name": "Rahul Sharma",
+      "password": "Rahul456"
+    },
+    {
+      "name": "Sara Malik",
+      "password": "Sara789"
+    },
+    {
+      "name": "Arjun Kumar",
+      "password": "Arjun321"
+    },
+    {
+      "name": "Zoya Ahmed",
+      "password": "Zoya654"
+    }
+  ]
+}
