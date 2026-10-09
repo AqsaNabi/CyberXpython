@@ -356,7 +356,3 @@ DELIMITER ;
 <li><b>Normalization</b> — Organizing data to reduce redundancy.</li>
 <li><b>Primary and Foreign Keys</b> — Defining relationships between tables.</li>
 </ul>
-
-## Conclusion
-
-<p>Through my SQL and DBMS learning, I studied SQL command categories, CRUD operations, constraints, database anomalies, ER diagrams, joins, data types, aggregate functions, string functions, and triggers. I practiced the syntax of these concepts through SQL queries and examples to strengthen my understanding of relational database management.</p>
