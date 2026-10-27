@@ -1,0 +1,38 @@
+{
+  "status": "complete",
+  "result_url": null,
+  "expires_in": null,
+  "output_format": "markdown",
+  "chunks": null,
+  "json": null,
+  "markdown": "\n\n{0}------------------------------------------------\n\n# MIR AQSA\n\nSrinagar, Jammu & Kashmir | 7006841224 | miraqsa186@gmail.com\n\n## PROFESSIONAL SUMMARY\n\nComputer Science graduate with hands-on experience in machine learning, deep learning, and Python-based application development. Built predictive classification models and a CNN-based plant disease classifier, and developed a full-stack employee management system using FastAPI and Streamlit. Interested in applying AI/ML and LLM application concepts to practical products.\n\n## TECHNICAL SKILLS\n\n**Programming & APIs:** Python, FastAPI, REST APIs, Streamlit, Pydantic\n\n**Machine Learning:** scikit-learn, Random Forest, XGBoost, SVM, model evaluation, cross-validation\n\n**Deep Learning & Data:** TensorFlow, CNNs, MobileNetV2, data preprocessing, classification, sentiment analysis\n\n**Application & Security:** JWT authentication, JSON persistence, PostgreSQL (foundational), ECC, AES, ChaCha20, PQC concepts\n\n**AI/LLM Learning:** Embeddings, semantic search, RAG fundamentals, LangChain concepts\n\n## EXPERIENCE & APPLIED ML WORK\n\n### **Research & Development Intern \u2013 UAV Security** | NIELIT \u2022 Nov 2025 \u2013 Apr 2026\n\n- Developed a secure UAV\u2013ground control station communication framework using ECC-based key exchange and adaptive symmetric encryption.\n- Implemented dynamic switching between ChaCha20 and AES based on network load to balance performance and robustness.\n- Explored post-quantum cryptography concepts for future-ready UAV security mechanisms.\n\n### **Credit Score Prediction \u2013 Paisa Bazaar Simulation** \u2022 Aug 2025 \u2013 Oct 2025\n\n- Built a classification model to predict Good, Standard, and Bad credit-score categories, achieving 92% overall accuracy on simulated data.\n- Compared Random Forest, XGBoost, and SVM using cross-validation; reported a 15% improvement in classification precision over baseline methods.\n\n### **Sentiment Analysis \u2013 Trader Behavior & Market Analysis** \u2022 Jun 2025 \u2013 Jul 2025\n\n- Analyzed Bitcoin market sentiment alongside historical trading data, identifying a reported 35% correlation between positive sentiment shifts and trade profitability.\n- Used the Fear & Greed Index and historical data to model trade direction with 78% accuracy and examine position-size changes during sentiment extremes.\n\n## PROJECTS\n\n### **Talent Management System (TMS) | Python, FastAPI, Streamlit, Pydantic, JWT, JSON**\n\n- Built a full-stack employee management application with registration, login, employee details, attendance, break tracking, and leave applications.\n- Designed a layered backend with routes, services, and repository modules, using JSON files for employee, attendance, and leave persistence.\n- Implemented JWT-based authenticated sessions and an optional workplace-location verification step for attendance check-in.\n\n### **Apple Leaf Disease Classification | TensorFlow, CNN, MobileNetV2**\n\n- Developed a deep-learning image classifier using MobileNetV2, reporting 92% accuracy for apple leaf disease classification.\n- Experimented with GoogleNet and custom CNN architectures and performed image preprocessing, training, and evaluation.\n\n## EDUCATION\n\n**B.Tech, Computer Science & Engineering** | University of Kashmir | 2021 \u2013 2024 | CGPA: 8.2/10\n\n**Diploma, Computer Science & Engineering** | Government Polytechnic College | 2018 \u2013 2020",
+  "html": null,
+  "extraction_schema_json": null,
+  "extraction_score_average": null,
+  "extraction_scoring_status": null,
+  "extraction_mode": null,
+  "segmentation_results": null,
+  "segmentation_schema": null,
+  "images": {},
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 25
+      }
+    ],
+    "failed_pages": []
+  },
+  "success": true,
+  "error": "",
+  "parse_quality_score": null,
+  "page_count": 1,
+  "total_cost": 0.0,
+  "cost_breakdown": {
+    "final_cost_cents": 0
+  },
+  "runtime": 0.05292105674743652,
+  "checkpoint_id": null,
+  "versions": null,
+  "evaluation": null
+}

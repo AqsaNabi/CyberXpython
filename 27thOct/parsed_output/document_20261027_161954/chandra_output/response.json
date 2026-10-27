@@ -1,0 +1,56 @@
+{
+  "status": "complete",
+  "result_url": null,
+  "expires_in": null,
+  "output_format": "markdown",
+  "chunks": null,
+  "json": null,
+  "markdown": "\n\n{0}------------------------------------------------\n\n# DOCUMENT PARSING TEST PACK\n\nA synthetic multi-format PDF for testing Chandra Parser\n\n**Purpose:** This sample combines narrative text, structured tables, bullet lists, numerical data, formulas, contact details, and layout changes. Use it to inspect extraction quality and reading order.\n\n| Document property | Value                               |\n|-------------------|-------------------------------------|\n| Document ID       | DPT-2026-014                        |\n| Version           | 1.2                                 |\n| Created           | 27 October 2026                     |\n| Content type      | Synthetic / fictional               |\n| Intended use      | PDF parser and RAG pipeline testing |\n| Expected pages    | 5                                   |\n\n***Important:*** All organizations, people, contact information, and measurements in this file are fictional test data. Do not treat them as real records.\n\n## Parsing checklist\n\n- Extract paragraphs and section headings.\n- Preserve table headers and associate each value with the correct row.\n- Keep lists in the correct order.\n- Retain symbols, dates, units, percentages, and currency values.\n- Check whether page breaks and footer text are handled appropriately.\n\n{1}------------------------------------------------\n\n## 1. Executive Summary\n\nNorthstar Sample Labs is a fictional organization used to demonstrate mixed document content. This test pack describes a small equipment-monitoring pilot, records its key metrics, and summarizes sample findings. The material intentionally includes repeated terms, identifiers, abbreviations, and values that a parser should preserve.\n\n### Pilot overview\n\nThe pilot ran from 1 September 2026 through 30 September 2026. Three locations submitted daily sensor readings. The sample dataset contains 1,248 observations, of which 1,211 were valid and 37 were flagged for review. A flagged observation is not automatically an error; it indicates that a rule or threshold needs checking.\n\n| Metric               | Result | Definition                        |\n|----------------------|--------|-----------------------------------|\n| Total observations   | 1,248  | All submitted sensor readings     |\n| Valid observations   | 1,211  | Readings passing basic validation |\n| Flagged observations | 37     | Readings requiring review         |\n| Validation rate      | 96.9%  | Valid \u00f7 total \u00d7 100               |\n| Locations            | 3      | North, Central, and South         |\n\n### Key findings\n\n- Central location recorded the highest observation count: 451.\n- The average measured temperature was 21.8 \u00b0C; the maximum was 38.4 \u00b0C.\n- Median network latency was 42 ms, while the 95th percentile was 118 ms.\n- The largest source of flagged records was missing humidity data.\n\n*Interpretation note: The numbers are fabricated to create realistic extraction cases. They do not represent measurements from an actual organization.*\n\n### 2. Location Summary\n\n| Location | Code  | Observations | Valid | Flagged |\n|----------|-------|--------------|-------|---------|\n| North    | LOC-N | 392          | 382   | 10      |\n| Central  | LOC-C | 451          | 439   | 12      |\n| South    | LOC-S | 405          | 390   | 15      |\n| Total    | \u2014     | 1,248        | 1,211 | 37      |\n\n{2}------------------------------------------------\n\n## 3. Equipment Inventory\n\nThe inventory table contains alphanumeric IDs, different units, decimal values, and status labels. During extraction, each device's identifier should remain connected to its model, location, calibration date, and status.\n\n| Device ID | Model        | Location | Range        | Last calibrated | Status      |\n|-----------|--------------|----------|--------------|-----------------|-------------|\n| SNS-104   | TempSense T4 | North    | \u221210 to 60 \u00b0C | 2026-08-21      | Active      |\n| SNS-117   | HumidPro H2  | Central  | 0\u2013100 %RH    | 2026-08-19      | Active      |\n| SNS-121   | AirMetric A7 | South    | 300\u20131100 hPa | 2026-08-26      | Review      |\n| GW-022    | LinkHub G3   | Central  | 10/100 Mbps  | 2026-08-18      | Active      |\n| SNS-133   | TempSense T4 | North    | \u221210 to 60 \u00b0C | 2026-08-28      | Maintenance |\n\n### 4. Monthly Readings\n\nThe following values represent fictional monthly summaries. Decimal precision and unit symbols are intentional.\n\n| Month          | Mean temp. (\u00b0C) | Mean humidity (%RH) | Median latency (ms) | Uptime (%) |\n|----------------|-----------------|---------------------|---------------------|------------|\n| June 2026      | 20.6            | 46.2                | 39                  | 99.91      |\n| July 2026      | 23.9            | 43.7                | 44                  | 99.87      |\n| August 2026    | 22.7            | 48.1                | 41                  | 99.94      |\n| September 2026 | 21.8            | 49.5                | 42                  | 99.92      |\n\n### 5. Review Rules\n\n| Rule ID | Condition                       | Action                      | Severity |\n|---------|---------------------------------|-----------------------------|----------|\n| R-01    | Temperature < \u22125 \u00b0C or > 45 \u00b0C  | Verify sensor and timestamp | Medium   |\n| R-02    | Humidity value is null          | Mark as incomplete          | Low      |\n| R-03    | Latency > 250 ms                | Inspect gateway logs        | Medium   |\n| R-04    | Duplicate device ID + timestamp | Retain one; log duplicate   | High     |\n\nRule notation: \u201c<\u201d means less than; \u201c>\u201d means greater than; null means no recorded value. A timestamp is stored in ISO 8601 format when available, for example 2026-09-14T10:35:00+05:30.\n\n{3}------------------------------------------------\n\n### 6. Data Quality Examples\n\nThese records intentionally include a missing value, a duplicate, and a threshold violation. A parser should preserve literal values and should not silently correct them.\n\n| Record ID | Device ID | Timestamp                 | Temperature | Humidity | Note                |\n|-----------|-----------|---------------------------|-------------|----------|---------------------|\n| REC-0001  | SNS-104   | 2026-09-02T09:15:00+05:30 | 22.4 \u00b0C     | 48 %RH   | Normal              |\n| REC-0002  | SNS-117   | 2026-09-02T09:16:00+05:30 | 21.9 \u00b0C     | \u2014        | Humidity missing    |\n| REC-0003  | SNS-121   | 2026-09-02T09:17:00+05:30 | 47.8 \u00b0C     | 41 %RH   | Threshold review    |\n| REC-0004  | SNS-104   | 2026-09-02T09:15:00+05:30 | 22.4 \u00b0C     | 48 %RH   | Potential duplicate |\n\n### 7. Calculation Notes\n\n*Validation rate = (valid observations / total observations) \u00d7 100*\n\nUsing the summary values:  $(1,211 \\div 1,248) \\times 100 \\approx 97.04\\%$ . The executive summary's 96.9% is intentionally included as a small inconsistency to test whether a downstream quality-control step can detect conflicting values.\n\n*Average =  $(x_1 + x_2 + \\dots + x_n) / n$*\n\nExample: for sample readings 19.5, 20.0, 22.5, and 25.0 \u00b0C, the mean is  $(19.5 + 20.0 + 22.5 + 25.0) / 4 = 21.75$  \u00b0C.\n\n### 8. Short Narrative and Terms\n\nDuring the September review, the operations team noticed intermittent delays at the Central gateway. The delay was brief and did not correlate consistently with temperature. The team recommended checking firmware version 3.2.1, confirming the gateway clock, and repeating the latency test during the next maintenance window.\n\n| Term | Meaning                                                             |\n|------|---------------------------------------------------------------------|\n| API  | Application Programming Interface                                   |\n| OCR  | Optical Character Recognition                                       |\n| RAG  | Retrieval-Augmented Generation                                      |\n| RH   | Relative humidity                                                   |\n| P95  | 95th percentile: a value at or below which 95% of observations fall |\n| UTC  | Coordinated Universal Time                                          |\n\n{4}------------------------------------------------\n\n### 9. Action Register\n\n| Action ID | Task                            | Owner role      | Due date   | Priority | State       |\n|-----------|---------------------------------|-----------------|------------|----------|-------------|\n| ACT-01    | Review missing humidity records | Data analyst    | 2026-11-03 | Medium   | Open        |\n| ACT-02    | Inspect Central gateway logs    | IT operations   | 2026-10-30 | High     | In progress |\n| ACT-03    | Confirm firmware 3.2.1          | Device engineer | 2026-11-05 | Medium   | Open        |\n| ACT-04    | Recalculate validation rate     | QA reviewer     | 2026-10-29 | High     | Open        |\n\n### 10. Contact and Reference Information\n\n| Field             | Sample value                      |\n|-------------------|-----------------------------------|\n| Organization      | Northstar Sample Labs (fictional) |\n| Contact person    | Jordan Example                    |\n| Email             | parser-test@example.invalid       |\n| Reference code    | NSL-DPT-2026-014                  |\n| Document revision | 1.2 \u2014 test content                |\n\n### 11. Extraction Test Questions\n\n- 1 What is the document ID and version?\n- 2 How many observations were flagged for review?\n- 3 Which device has status \u201cReview\u201d?\n- 4 What timestamp belongs to record REC-0003?\n- 5 List the four action IDs and their due dates.\n- 6 Identify the intentional inconsistency in the validation rate.\n\n*End of document. Expected content includes headings, paragraphs, tables, bullets, numeric values, Unicode symbols (\u00b0C, \u2013, \u00d7, \u00f7), ISO-style timestamps, and a deliberate inconsistency.*",
+  "html": null,
+  "extraction_schema_json": null,
+  "extraction_score_average": null,
+  "extraction_scoring_status": null,
+  "extraction_mode": null,
+  "segmentation_results": null,
+  "segmentation_schema": null,
+  "images": {},
+  "metadata": {
+    "page_stats": [
+      {
+        "page_id": 0,
+        "num_blocks": 9
+      },
+      {
+        "page_id": 1,
+        "num_blocks": 12
+      },
+      {
+        "page_id": 2,
+        "num_blocks": 11
+      },
+      {
+        "page_id": 3,
+        "num_blocks": 13
+      },
+      {
+        "page_id": 4,
+        "num_blocks": 9
+      }
+    ],
+    "failed_pages": []
+  },
+  "success": true,
+  "error": "",
+  "parse_quality_score": null,
+  "page_count": 5,
+  "total_cost": 5.0,
+  "cost_breakdown": {
+    "list_cost_cents": 5.0,
+    "final_cost_cents": 5.0,
+    "regional_multiplier": 1.0
+  },
+  "runtime": 0.1204996109008789,
+  "checkpoint_id": null,
+  "versions": null,
+  "evaluation": null
+}
